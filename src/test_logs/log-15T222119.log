@@ -1,0 +1,17 @@
+22:21:26.079 [main] INFO  demo.core.ApplicationManager -- Запущен браузер: chrome
+22:21:26.273 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+22:21:27.000 [main] INFO  demo.fw.UserHelper -- Typing email: portishead20891@gmail.com
+22:21:27.002 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20891@gmail.com
+22:21:27.310 [main] INFO  demo.fw.UserHelper -- Typing password: Password@81
+22:21:27.312 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+22:21:33.865 [main] INFO  demo.TestBase -- Test is passed: [addItemToCartDataProviderTest]
+22:21:36.098 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+22:21:36.148 [main] ERROR demo.TestBase -- Error during preconditions: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Log in')]"}
+  (Session info: chrome=133.0.6943.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.26'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cd9abb6b8ff9359e0ecebc7dad2aa4d7, findElement {value=//a[contains(text(),'Log in')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.60, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62193}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62193/devtoo..., se:cdpVersion: 133.0.6943.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cd9abb6b8ff9359e0ecebc7dad2aa4d7

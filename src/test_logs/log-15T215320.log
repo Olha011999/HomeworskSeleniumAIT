@@ -1,0 +1,14 @@
+21:53:27.760 [main] INFO  demo.core.ApplicationManager -- Запущен браузер: chrome
+21:53:27.938 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+21:53:28.628 [main] INFO  demo.fw.UserHelper -- Typing email: portishead20891@gmail.com
+21:53:28.629 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20891@gmail.com
+21:53:28.962 [main] INFO  demo.fw.UserHelper -- Typing password: Password@81
+21:53:28.962 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+21:53:34.868 [main] INFO  demo.TestBase -- Test is passed: [addItemToCartDataProviderTest]
+21:53:34.883 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+21:53:34.894 [main] ERROR demo.TestBase -- Error during preconditions: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.26'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=xpath, value=//a[contains(text(),'Log in')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.60, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54535}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54535/devtoo..., se:cdpVersion: 133.0.6943.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}

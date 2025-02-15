@@ -1,0 +1,6 @@
+21:45:57.314 [main] INFO  demo.core.ApplicationManager -- Запущен браузер: chrome
+21:45:57.630 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+21:45:58.364 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20891@gmail.com
+21:45:58.761 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+21:46:05.145 [main] INFO  demo.TestBase -- Test is passed: [addItemToCartDataProviderTest]
+21:46:05.150 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]

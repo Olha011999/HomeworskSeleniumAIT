@@ -1,0 +1,6 @@
+21:50:14.641 [main] INFO  demo.core.ApplicationManager -- Запущен браузер: chrome
+21:50:14.790 [main] INFO  demo.TestBase -- Test is started: [addItemToCartTest]
+21:50:15.527 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20891@gmail.com
+21:50:15.896 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+21:50:21.717 [main] INFO  demo.TestBase -- Test is passed: [addItemToCartTest]
+21:50:21.732 [main] INFO  demo.core.ApplicationManager -- Драйвер закрыт.

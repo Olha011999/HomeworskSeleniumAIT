@@ -1,0 +1,5 @@
+21:41:07.046 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+21:41:07.801 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20891@gmail.com
+21:41:08.246 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+21:41:14.759 [main] INFO  demo.TestBase -- Test is passed: [addItemToCartDataProviderTest]
+21:41:14.759 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
