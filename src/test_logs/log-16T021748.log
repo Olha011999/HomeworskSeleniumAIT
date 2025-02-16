@@ -1,0 +1,3 @@
+02:17:49.612 [main] INFO  demo.TestBase -- Test is started: [FirstHomework]
+02:17:54.959 [main] INFO  demo.fw.ContactHelper -- Typing urlhttps://demowebshop.tricentis.com/gift-cards
+02:17:57.694 [main] INFO  demo.TestBase -- Test is PASSED: [FirstHomework]

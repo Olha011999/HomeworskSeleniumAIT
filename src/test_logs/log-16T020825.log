@@ -1,0 +1,20 @@
+02:08:27.396 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+02:08:35.031 [main] INFO  demo.TestBase -- LOGIN link is present. No need to Sign Out
+02:08:35.740 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+02:08:36.167 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+02:08:44.470 [main] INFO  demo.TestBase -- Test is PASSED: [addItemToCartDataProviderTest]
+02:08:44.473 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+02:08:50.005 [main] INFO  demo.TestBase -- LOGIN link is present. No need to Sign Out
+02:08:50.607 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+02:08:50.971 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+02:09:17.600 [main] ERROR demo.TestBase -- Test is FAILED: [addItemToCartDataProviderTest], Screenshot: [null]
+02:09:17.603 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+02:09:23.270 [main] INFO  demo.TestBase -- LOGIN link is present. No need to Sign Out
+02:09:23.938 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+02:09:24.317 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+02:09:29.732 [main] ERROR demo.TestBase -- Test is FAILED: [addItemToCartDataProviderTest], Screenshot: [null]
+02:09:29.735 [main] INFO  demo.TestBase -- Test is started: [addItemToCartTest]
+02:09:35.352 [main] INFO  demo.TestBase -- LOGIN link is present. No need to Sign Out
+02:09:35.975 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+02:09:36.336 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+02:09:42.894 [main] INFO  demo.TestBase -- Test is PASSED: [addItemToCartTest]

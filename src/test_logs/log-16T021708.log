@@ -1,0 +1,14 @@
+02:17:10.580 [main] INFO  demo.TestBase -- Test is started: [loginExistedUserDataProviderPositiveTest]
+02:17:18.331 [main] INFO  demo.TestBase -- Login link is present. No need to sing out
+02:17:19.052 [main] INFO  demo.fw.UserHelper -- Typing email: portishead20@gmail.com
+02:17:19.053 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+02:17:19.393 [main] INFO  demo.fw.UserHelper -- Typing password: Password@81
+02:17:19.394 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+02:17:21.842 [main] INFO  demo.TestBase -- Test is PASSED: [loginExistedUserDataProviderPositiveTest]
+02:17:21.852 [main] INFO  demo.TestBase -- Test is started: [loginExistedUserDataProviderPositiveTest]
+02:17:28.292 [main] INFO  demo.TestBase -- Login link is present. No need to sing out
+02:17:29.055 [main] INFO  demo.fw.UserHelper -- Typing email: portishead20@gmail.com
+02:17:29.056 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+02:17:29.496 [main] INFO  demo.fw.UserHelper -- Typing password: Password@81
+02:17:29.497 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+02:17:32.134 [main] INFO  demo.TestBase -- Test is PASSED: [loginExistedUserDataProviderPositiveTest]

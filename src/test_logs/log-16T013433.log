@@ -1,0 +1,4 @@
+01:34:34.899 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+01:34:42.876 [main] INFO  demo.TestBase -- LOGIN link is present. No need to Sign Out
+01:34:43.579 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+01:34:43.961 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81

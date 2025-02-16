@@ -1,0 +1,4 @@
+02:18:07.667 [main] INFO  demo.TestBase -- Test is started: [createAccountPositiveTest]
+02:18:17.205 [main] INFO  demo.TestBase -- Test is PASSED: [createAccountPositiveTest]
+02:18:17.213 [main] INFO  demo.TestBase -- Test is started: [CreateAccountNegativeTest]
+02:18:25.348 [main] INFO  demo.TestBase -- Test is PASSED: [CreateAccountNegativeTest]

@@ -2,6 +2,7 @@ package demo.core;
 
 import demo.fw.ContactHelper;
 import demo.fw.UserHelper;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,46 +17,41 @@ import java.time.Duration;
 public class ApplicationManager {
 
     public WebDriver driver;
+    private final String browser;
     UserHelper userHelper;
     ContactHelper contactHelper;
 
     Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
-
-    private final String browser;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
     }
 
     public void init() {
-        try {
-            if (browser.equalsIgnoreCase("chrome")) {
-                driver = new ChromeDriver();
-            } else if (browser.equalsIgnoreCase("chrome_headless")) {
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("headless");
-                driver = new ChromeDriver(options);
-            } else if (browser.equalsIgnoreCase("firefox")) {
-                driver = new FirefoxDriver();
-            } else if (browser.equalsIgnoreCase("edge")) {
-                driver = new EdgeDriver();
-            } else if (browser.equalsIgnoreCase("safari")) {
-                driver = new SafariDriver();
-            } else {
-                throw new IllegalArgumentException("❌ Некорректный браузер: " + browser + ". Доступные варианты: chrome, firefox, edge, safari.");
-            }
-
-            driver.get("https://demowebshop.tricentis.com/");
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-            logger.info("Запущен браузер: " + browser);
-            userHelper = new UserHelper(driver);
-            contactHelper = new ContactHelper(driver);
-        } catch (Exception e) {
-            logger.error("Ошибка при инициализации драйвера: " + e.getMessage());
-            throw e; // Пробрасываем исключение дальше
+        if (browser.equalsIgnoreCase("chrome")) {
+            driver = new ChromeDriver();
+        } else if (browser.equalsIgnoreCase("chrome_headless")) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            options.addArguments("window-size=1920x1080");
+            driver = new ChromeDriver(options);
         }
+        else if (browser.equalsIgnoreCase("firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("edge")) {
+            driver = new EdgeDriver();
+        } else if (browser.equalsIgnoreCase("safari")) {
+            driver = new SafariDriver();
+        }  else {
+            //driver = new ChromeDriver();
+            throw new IllegalArgumentException("❌ Некорректный браузер: " + browser + ". Доступные варианты: chrome, firefox, edge, safari.");
+        }
+        driver.get("https://demowebshop.tricentis.com");
+        driver.manage().window().setPosition(new Point(2500, 0));
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        userHelper = new UserHelper(driver);
+        contactHelper = new ContactHelper(driver);
     }
 
     public UserHelper getUserHelper() {
@@ -67,9 +63,10 @@ public class ApplicationManager {
     }
 
     public void stop() {
-        if (driver != null) {
-            driver.quit();
-            logger.info("Драйвер закрыт.");
-        }
+        driver.quit();
+//        if (driver != null) {
+//            driver.quit();
+//            logger.info("Драйвер закрыт.");
+//        }
     }
 }

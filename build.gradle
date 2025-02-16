@@ -29,7 +29,7 @@ def registerTask(String taskName, String suitePath) {
         }
     }
 }
-registerTask('add', 'src/test/resources/add.xml')  //формируем наши тест-сьюты
+registerTask('home', 'src/test/resources/home.xml')  //формируем наши тест-сьюты
 registerTask('smoky', 'src/test/resources/smoke.xml')
 registerTask('regression', 'src/test/resources/regression.xml')
 

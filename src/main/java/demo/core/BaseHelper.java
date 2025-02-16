@@ -15,16 +15,16 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class BaseHelper {
-
     public WebDriver driver;
-    UserHelper userHelper;
-    ContactHelper contactHelper;
 
     Logger logger = LoggerFactory.getLogger(BaseHelper.class);
 
     public BaseHelper(WebDriver driver) {
         this.driver = driver;
     }
+
+    UserHelper userHelper;
+    ContactHelper contactHelper;
 
     public UserHelper getUserHelper() {
         return userHelper;
@@ -34,12 +34,15 @@ public class BaseHelper {
         return contactHelper;
     }
 
+    public boolean isElementPresent(By locator) {return driver.findElements(locator).size() > 0;}
+
     public void type(By locator, String text) {
         logger.info("Typing email" +text);
         //driver.findElement(By.name("Email")).click();
+        if (text != null) {
         click(locator);
         driver.findElement(locator).clear();
-        driver.findElement(locator).sendKeys(text);
+        driver.findElement(locator).sendKeys(text);}
     }
 
 //    public void click(By locator) {
@@ -53,38 +56,52 @@ public class BaseHelper {
     }
 
     public boolean isAlertPresent() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        Assert.assertTrue(wait.until(ExpectedConditions.alertIsPresent()) != null);
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
+        Alert alert = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.alertIsPresent());
+        if(alert == null){
             return false;
+        } else {
+            driver.switchTo().alert().accept();
+            return true;
         }
     }
 
+
     public String takeScreenshot() {
-        // Check for alert before taking the screenshot
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Timeout for alert detection
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();  // or alert.dismiss(); based on your use case
-            System.out.println("Alert was present and accepted.");
-        } catch (NoAlertPresentException e) {
-            // No alert, proceed with screenshot capture
-        }catch (TimeoutException e) {
-// Обработка TimeoutException, если alert так и не появился
-            System.out.println("No alert present within timeout, proceeding to take screenshot.");
+        if (driver == null) {
+            System.out.println("Driver is null. Cannot take screenshot.");
+            return null;
         }
-        // Capture screenshot
-        File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        // Проверяем наличие алерта перед снятием скриншота
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Таймаут на обнаружение алерта
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            alert.accept();  // или alert.dismiss();
+            System.out.println("Alert был найден и закрыт.");
+        } catch (NoAlertPresentException e) {
+            // Нет алерта, продолжаем
+        } catch (TimeoutException e) {
+            System.out.println("Алерт не появился в течение таймаута, продолжаем снятие скриншота.");
+        }
+
+        // Захват скриншота
+        File tmp;
+        try {
+            tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        } catch (Exception e) {
+            System.out.println("Ошибка при попытке сделать скриншот: " + e.getMessage());
+            return null;
+        }
+
         File screenshot = new File("src/test_screenshots/screen-" + System.currentTimeMillis() + ".png");
         try {
             Files.copy(tmp, screenshot);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Ошибка при сохранении скриншота: " + e.getMessage());
+            return null;
         }
-        System.out.println("Screenshot saved to: [" + screenshot.getAbsolutePath() + "]");
+
+        System.out.println("Скриншот сохранен в: " + screenshot.getAbsolutePath());
         return screenshot.getAbsolutePath();
     }
 
