@@ -97,7 +97,7 @@ public class AddItemToCartTests extends TestBase {
         app.getUserHelper().clickOnLogoutButton();
     }
 
-    @AfterMethod(enabled = false)
+    @AfterMethod//(enabled = false)
     public void Finish() {
         if (app.getUserHelper().driver != null) {
             app.getUserHelper().driver.quit();
