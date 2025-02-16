@@ -1,0 +1,9 @@
+19:01:29.129 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+19:01:36.888 [main] INFO  demo.TestBase -- LOGIN link is present. No need to Sign Out
+19:01:37.570 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+19:01:38.051 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81
+19:01:44.909 [main] INFO  demo.TestBase -- Test is PASSED: [addItemToCartDataProviderTest]
+19:01:44.919 [main] INFO  demo.TestBase -- Test is started: [addItemToCartDataProviderTest]
+19:01:51.682 [main] INFO  demo.TestBase -- LOGIN link is present. No need to Sign Out
+19:01:52.276 [main] INFO  demo.core.BaseHelper -- Typing emailportishead20@gmail.com
+19:01:52.638 [main] INFO  demo.core.BaseHelper -- Typing emailPassword@81

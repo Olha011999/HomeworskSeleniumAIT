@@ -72,32 +72,32 @@ public class AddItemToCartTests extends TestBase {
     @Test(dataProvider = "addItemToCartDataProvider", dataProviderClass = DataProviders.class)
     public void addItemToCartDataProviderTest(String category, String subCategory, int productIndex) {
         app.getUserHelper().driver.manage().window().maximize();
-        app.getUserHelper().click(By.xpath("//ul[@class='top-menu']//a[contains(text(),'" + category + "')]"));
-        app.getUserHelper().click(By.xpath("//h2[@class='title']//a[contains(text(),'" + subCategory + "')]"));
-        app.getUserHelper().click(By.xpath("(//input[@class='button-2 product-box-add-to-cart-button'])[" + productIndex + "]"));
-        app.getUserHelper().clickIfPresent(By.cssSelector("#product_attribute_16_5_4"));
-        app.getUserHelper().clickIfPresent(By.cssSelector("#product_attribute_16_6_5"));
-        app.getUserHelper().clickIfPresent(By.cssSelector("#product_attribute_16_3_6_19"));
-        app.getUserHelper().clickIfPresent(By.cssSelector("#product_attribute_16_4_7_21"));
-        app.getUserHelper().clickIfPresent(By.xpath("//input[@id='product_attribute_16_8_8_22']"));
+        app.getUserHelper().click(By.xpath("(//ul[@class='top-menu']//a)[2]"));
+        //driver.navigate().to("https://demowebshop.tricentis.com/computers");
+        app.getUserHelper().click(By.xpath("(//h2[@class='title']//a)[1]"));
+        //driver.navigate().to("https://demowebshop.tricentis.com/desktops");
+        app.getUserHelper().click(By.xpath("(//input[@class='button-2 product-box-add-to-cart-button'])[2]"));
+        //driver.navigate().to("https://demowebshop.tricentis.com/build-your-own-computer");
+        app.getUserHelper().click(By.cssSelector("#product_attribute_16_5_4"));
+        app.getUserHelper().click(By.cssSelector("#product_attribute_16_6_5"));
+        app.getUserHelper().click(By.cssSelector("#product_attribute_16_3_6_19"));
+        app.getUserHelper().click(By.cssSelector("#product_attribute_16_4_7_21"));
+        app.getUserHelper().click(By.xpath("//input[@id='product_attribute_16_8_8_22']"));
+        app.getUserHelper().click(By.xpath("//input[@id='addtocart_16_EnteredQuantity']"));
         WebDriverWait wait = new WebDriverWait(app.getUserHelper().driver, Duration.ofSeconds(10));
         WebElement addToCartButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#add-to-cart-button-16")));
-
-// Клик по кнопке "Add to Cart"
         addToCartButton.click();
+
         app.getUserHelper().click(By.xpath("//span[contains(text(),'Shopping cart')]"));
 
-        String productName = app.getUserHelper().getText(By.xpath("//tbody/tr[1]/td[3]/a[1]"));
-        String productNameInCart = app.getUserHelper().getText(By.className("product-name"));
+        String productName = app.getUserHelper().driver.findElement(By.xpath("//tbody/tr[1]/td[3]/a[1]")).getText();
+        String productNameInCard = app.getUserHelper().driver.findElement(By.className("product-name")).getText();
 
-        System.out.println("Selected product: " + productName);
-        System.out.println("Item in your cart: " + productNameInCart);
-
-        Assert.assertEquals(productName, productNameInCart);
+        Assert.assertEquals(productName, productNameInCard);
         app.getUserHelper().clickOnLogoutButton();
     }
 
-    @AfterMethod//(enabled = false)
+    @AfterMethod(enabled = false)
     public void Finish() {
         if (app.getUserHelper().driver != null) {
             app.getUserHelper().driver.quit();
