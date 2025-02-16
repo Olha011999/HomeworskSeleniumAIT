@@ -103,10 +103,7 @@ public class AddItemToCartTests extends TestBase {
             app.getUserHelper().driver.quit();
             app.getUserHelper().driver = null;
         }
-        //app.getUserHelper().driver.quit();
-//        if (app.getUserHelper().driver != null) {
-//            app.getUserHelper().driver.quit();
-//        }
+
 
     }
 }
