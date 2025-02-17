@@ -1,0 +1,2 @@
+22:16:42.296 [main] INFO  demo.TestBase -- Test is started: [createAccountPositiveTest]
+22:16:52.909 [main] INFO  demo.TestBase -- Test is PASSED: [createAccountPositiveTest]

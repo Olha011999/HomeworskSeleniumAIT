@@ -1,0 +1,3 @@
+22:19:40.963 [main] INFO  demo.TestBase -- Test is started: [createAccountDataProvaiderPositiveTest]
+22:19:50.546 [main] INFO  demo.TestBase -- Test is PASSED: [createAccountDataProvaiderPositiveTest]
+22:19:50.549 [main] INFO  demo.TestBase -- Test is started: [createAccountDataProvaiderPositiveTest]
